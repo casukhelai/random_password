@@ -33,6 +33,10 @@ function writePassword() {
       let addNum = window.confirm("Do you want numbers in your password?");
     
   
+  
+  // for concatenating the choices
+  let choices = [];
+
   // 4! (four factorial) = 24 choices. Do not want to write all 24 options out, find way to condense options
   if(!lowerCase && !upperCase && !specialChar && !addNum){
     choices = window.alert("Please choose at least one condition for your password");
@@ -40,10 +44,11 @@ function writePassword() {
     upperCase = window.confirm("Do you want uppercase letters in your password?");
     specialChar = window.confirm("Do you want any special characters in your password?");
     addNum = window.confirm("Do you want numbers in your password?");
+    
   }
 
  // make four INDEPENDENT if statements, so if one is not true, then simply doesn't run
- let choices = []; // for concatenating the choices
+
   if(lowerCase){
     choices = choices.concat(lowerLetters);
   }
