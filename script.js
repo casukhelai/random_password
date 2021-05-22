@@ -73,6 +73,8 @@ for (var i = 0; i < userInput; i++) {
   // convert the pass_init array into a string
   let password = pass_init.join("");
   let passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
   
   // This shows the password in the box
   passwordText.setAttribute("placeholder", password);
